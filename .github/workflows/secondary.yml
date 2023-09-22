@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Check Trigger
         run: |
-            echo "Successful run"
+            echo "The workflow from another repo"
   
