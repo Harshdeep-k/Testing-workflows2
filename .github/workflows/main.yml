@@ -1,0 +1,12 @@
+name: Main Workflow
+
+on: 
+  push:
+    branches:
+     - main
+
+jobs:
+  trigger-secondary-workflow:
+    uses: Harshdeep-k/Testing-workflows2/.github/workflows/secondary.yml@main
+    
+      

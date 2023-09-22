@@ -1,0 +1,14 @@
+name: Secondary Workflow
+
+on:
+  workflow_call:
+  
+
+jobs:
+  run-if-triggered:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Trigger
+        run: |
+            echo "Successful run"
+  
