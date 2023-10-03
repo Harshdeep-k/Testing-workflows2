@@ -2,6 +2,12 @@ name: Secondary Workflow
 
 on:
   workflow_call:
+    inputs:
+      lang: 
+        description: "language"
+        required: true
+        type: string
+
   
 
 jobs:
@@ -11,4 +17,11 @@ jobs:
       - name: Check Trigger
         run: |
             echo "The workflow from another repo"
-  
+      - name: Check conditionals
+        if: ${{inputs.lang == "java"}}
+        run: echo "Called the conditional for java"
+
+      - name: Check conditionals 2
+        if: ${{inputs.lang == "python"}}
+        run: echo "Called the conditional for python"
+
