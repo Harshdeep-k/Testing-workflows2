@@ -18,10 +18,10 @@ jobs:
         run: |
             echo "The workflow from another repo"
       - name: Check conditionals
-        if: ${{inputs.lang == "java"}}
+        if: ${{inputs.lang}} == "java"
         run: echo "Called the conditional for java"
 
       - name: Check conditionals 2
-        if: ${{inputs.lang == "python"}}
+        if: ${{inputs.lang}}  == "python"
         run: echo "Called the conditional for python"
 
